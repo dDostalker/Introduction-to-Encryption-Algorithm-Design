@@ -245,7 +245,7 @@ def main():
 
     Wi_menu = tkinter.Menu(MainWindows,bg='#1c1c1c',fg='white')
     Wi_menu.add_command(label="重置", command=FMenu1)
-    Wi_menu.add_command(label='e生成',command= FMenu2)
+
     Wi_menu.add_command(label="关于", command=FMenu3)
 
     #信息设置
