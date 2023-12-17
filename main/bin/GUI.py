@@ -75,6 +75,7 @@ def main():
         Entry2.place_forget()
         Entry3.place_forget()
         Entry4.place_forget()
+        Entry5.place_forget()
         KSkey.config(text=' ')
         Mmode.current(0)
         Mkey.current(0)
@@ -106,6 +107,7 @@ def main():
             Entry2.place_forget()
             Entry3.place_forget()
             Entry4.place_forget()
+            Entry5.place_forget()
             KSkey.config(text='轮数')
             Entry1.place(x=15, y=130)
             MKS.place(x=15,y=300)
@@ -117,6 +119,7 @@ def main():
             Entry2.place_forget()
             Entry3.place_forget()
             Entry4.place_forget()
+            Entry5.place_forget()
             KSkey.config(text='输入p                                              输入q                                                 输入e')
             Entry1.place(x=15, y=130)
             Entry2.place(x=15,y=300)
@@ -130,6 +133,7 @@ def main():
             Entry2.place_forget()
             Entry3.place_forget()
             Entry4.place_forget()
+            Entry5.place_forget()
             KSkey.config(text='key')
             Entry1.place(x=15, y=130)
             Entry3.place(x=15,y=300)
@@ -167,10 +171,10 @@ def main():
         return
     def FRSAWindowU():
         if(Entry1.get('0.0','end')):
-            word = Entry1.get('0.0','end')
+            word = int(Entry1.get('0.0','end'))
             p = int(Entry2.get())
             q = int(Entry4.get())
-            e = int(Entry5)
+            e = int(Entry5.get())
             word2 = rsa(p,q,e,word)
             Entry1.delete(1.0, tkinter.END)
             Entry1.insert("1.0", word2)
@@ -180,10 +184,10 @@ def main():
             print("bad input")
             return
     def FRSAWindowC():
-        word = Entry1.get('0.0', 'end')
+        word = int(Entry1.get('0.0', 'end'))
         p = int(Entry2.get())
         q = int(Entry4.get())
-        e = int(Entry5)
+        e = int(Entry5.get())
         word2 = rsa(p, q, e, word)
         word2 = rsa2(p, q, e,word)
         Entry1.delete(1.0, tkinter.END)
